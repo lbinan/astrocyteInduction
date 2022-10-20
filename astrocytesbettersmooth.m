@@ -151,7 +151,7 @@ for i=2:max(idx)
     sortedcells=[sortedcells;addthis];
 end
 writematrix(sortedcells,fullfile(outputs,'sortedcells.csv'))
-mydata=sortedcells;
+mydata=sortedcells(:,1:end-1);
 mycorrelations=corrcoef(mydata');
 
 % figure,
